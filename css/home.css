@@ -1,0 +1,1415 @@
+
+
+/* START RESET CSS ======================================*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END RESET CSS ======================================*/
+
+
+/* start CLEARFIX CSS =================================*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+/* end CLEARFIX CSS ===================================*/
+
+
+
+/* start FONTS =======================================*/
+@font-face {
+    font-family: 'Homestead-Display';
+    src: url('../fonts/Homestead/homestead-display-webfont.eot');
+    src: url('../fonts/Homestead/homestead-display-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Homestead/homestead-display-webfont.woff') format('woff'),
+         url('../fonts/Homestead/homestead-display-webfont.ttf') format('truetype'),
+         url('../fonts/Homestead/homestead-display-webfont.svg#homestead_displaydisplay') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "Homestead-Regular";
+    src: url('../fonts/Homestead/homestead-regular-webfont.eot');
+    src: url('../fonts/Homestead/homestead-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Homestead/homestead-regular-webfont.woff') format('woff'),
+         url('../fonts/Homestead/homestead-regular-webfont.ttf') format('truetype'),
+         url('../fonts/Homestead/homestead-regular-webfont.svg#homestead_regularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Windsong';
+    src: url('../fonts/Windsong/Windsong-webfont.eot');
+    src: url('../fonts/Windsong/Windsong-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Windsong/Windsong-webfont.woff') format('woff'),
+         url('../fonts/Windsong/Windsong-webfont.ttf') format('truetype'),
+         url('../fonts/Windsong/Windsong-webfont.svg#WindsongRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*@font-face {
+    font-family: "Atrament";
+    font-style: normal;
+    font-weight: 400;
+    src: url("data:font/opentype;base64,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");
+}
+*/
+@font-face {
+    font-family: 'Calluna';
+    src: url('../fonts/Calluna/calluna-it-webfont.eot');
+    src: url('../fonts/Calluna/calluna-it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Calluna/calluna-it-webfont.woff') format('woff'),
+         url('../fonts/Calluna/calluna-it-webfont.ttf') format('truetype'),
+         url('../fonts/Calluna/calluna-it-webfont.svg#callunaitalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'MavenProLight300';
+    src: url('../fonts/MavenProLight/mavenprolight-300-webfont.eot');
+    src: url('../fonts/MavenProLight/mavenprolight-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/MavenProLight/mavenprolight-300-webfont.woff') format('woff'),
+         url('../fonts/MavenProLight/mavenprolight-300-webfont.ttf') format('truetype'),
+         url('../fonts/MavenProLight/mavenprolight-300-webfont.svg#maven_pro_light300') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'MavenProLight200';
+    src: url('../fonts/MavenProLight/mavenprolight-200-webfont.eot');
+    src: url('../fonts/MavenProLight/mavenprolight-200-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MavenProLight/mavenprolight-200-webfont.woff') format('woff'),
+    url('../fonts/MavenProLight/mavenprolight-200-webfont.ttf') format('truetype'),
+    url('../fonts/MavenProLight/mavenprolight-200-webfont.svg#maven_pro_light200') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'MavenProLight100';
+    src: url('../fonts/MavenProLight/mavenprolight-100-webfont.eot');
+    src: url('../fonts/MavenProLight/mavenprolight-100-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MavenProLight/mavenprolight-100-webfont.woff') format('woff'),
+    url('../fonts/MavenProLight/mavenprolight-100-webfont.ttf') format('truetype'),
+    url('../fonts/MavenProLight/mavenprolight-100-webfont.svg#maven_pro_light100') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* end FONTS =======================================*/
+
+
+/* start GLOBALS ===================================*/
+body{
+	/*min-width: 960px;*/
+}
+.page{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+#navcircles{
+    position: fixed;
+    z-index: 1000;
+    right: 10px;
+    top: 12px;
+    opacity: .9;
+}
+#navcircles div{
+    width: 15px;
+    height: 5px;
+    border: 1px dotted rgba(255,255,255,.7);
+    background: transparent;
+    margin-bottom: 4px;
+}
+#navcircles .active{
+    background: white;
+}
+
+/* end GLOBALS =====================================*/
+
+
+
+/* start HOMEPAGE ==================================*/
+#landing{
+	background: url(../images/grid-wheat.jpg) no-repeat fixed;
+	background-size: cover;
+	width: 100%;
+	min-height: 800px;
+	height: 100%;
+}
+
+#downarrow{
+    position: absolute;
+    left: 40px;
+    bottom: 30px;
+    opacity: .2;
+}
+
+
+#services-list{
+    padding: 30px 0 50px 40px;
+}
+#logowhite{
+    opacity: .9;
+    height: 70px;
+    width: auto;
+    vertical-align: top;
+}
+#services-list .services{
+    display: inline-block;
+    opacity: .7;
+    vertical-align: top;
+    padding-top: 20px;
+    padding-left: 33px;
+
+    font-family: "MavenProLight300", sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    line-height: 1.1em;
+    /*text-shadow: 1px 1px rgba(0,0,0, .5);*/
+    letter-spacing: -1px;    
+    
+    color: white;
+}
+.services span{
+    padding-right: 1em;
+}
+
+#brand-footer{
+	display: none;
+	height: 126px;
+	width: 100%;
+	position: absolute;
+	bottom:0;
+	overflow: hidden;
+}
+
+#logo{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}
+
+#hot-blocks-wrapper{
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	/*border: 1px solid red;*/
+	width: 1500px;
+	height: 500px;
+	left: -100px;
+	/*display: none;*/
+}
+
+
+.hot-block{
+	height: 250px;
+	display: inline-block;
+}
+/*.fade-1{
+	left: 0;
+}
+.fade-2{
+	left: 137px;
+}
+.fade-3{
+	left: 548px;
+}
+.fade-4{
+	left: 684px;
+}*/
+.fade-1{
+    left: 0;
+}
+.fade-2{
+    left: 106px;
+}
+.fade-3{
+    left: 488px;
+}
+.fade-4{
+    left: 594px;
+}
+
+.fade-b{
+	position: absolute;
+	background: white;
+	opacity: 0;
+	height: 250px;
+	width: 243px;
+	display: inline-block;
+	vertical-align: top;	
+}
+.fade-a{
+	position: absolute;
+	background: white;
+	opacity: 0;
+	height: 250px;
+	width: 243px;
+	display: inline-block;
+	vertical-align: top;	
+}
+.hot-block .focus-block{
+	position: absolute;
+	left: 273px;
+    left: 228px;
+
+	display: inline-block;
+	vertical-align: top;
+	
+	width: 381px;
+	height: 250px;
+	
+	background: transparent;
+	color: black;
+	opacity: 0;
+
+	cursor: pointer;
+
+	z-index: 1;
+}
+.hot-block .focus-block-outline{
+	position: absolute;
+	left: 273px;
+    left: 228px;
+
+	display: inline-block;
+	vertical-align: top;
+	
+	width: 381px;
+	height: 250px;
+	
+	background: transparent;
+	color: black;
+	opacity: .35;
+
+	cursor: pointer;
+
+	z-index: 0;
+}
+.hot-block .title{
+	position: absolute;
+	left: 664px;
+	bottom: 30px;
+	z-index: 2;
+
+	height: auto;
+	width: auto;
+    
+	background: 0;
+    opacity: 0;
+    
+    color: #333;
+    
+    font-family: "Homestead-Display", sans-serif;
+    font-size: 55px;
+    letter-spacing: -1px;    
+    line-height: .8em;
+}
+
+
+
+#hotblock-1{ 
+	position: absolute;
+	left: 50%;
+	margin-left: -420px;
+}
+#hotblock-1 .fade-a,
+#hotblock-1 .fade-b{	
+	background: url('../images/left-stripe-213.png') no-repeat center center transparent;
+}
+#hotblock-1 .focus-block{
+	background: url('../images/hotblock-portfolio.png') no-repeat center center transparent;
+}
+
+#hotblock-1 .focus-block-outline{
+	background: url('../images/hotblock-portfolio-outline.png') center center transparent;
+	opacity: .7;
+}
+#hotblock-1 .title{
+    left: 610px;
+}
+
+/*#hotblock-2 { position: absolute; left: 750px;	}*/
+
+
+#hotblock-3 { position: absolute; left:   0px; top: 320px; }
+
+#hotblock-3 .fade-a,
+#hotblock-3 .fade-b{	
+	background: url('../images/right-stripe-compress.png') no-repeat center center transparent;
+    background: url('../images/right-stripe-213.png') no-repeat center center transparent;
+}
+#hotblock-3 .focus-block{
+	background: url('../images/hotblock-do.png') no-repeat center center transparent;
+}
+#hotblock-3 .focus-block-outline{
+	background: url('../images/hotblock-outline-right.png') center center transparent;
+	opacity: .5;
+}
+#hotblock-3 .title{
+	color: white;
+	left: 611px;
+	bottom: 30px;
+	width: 240px;
+}
+
+#hotblock-4 { position: absolute; left: 700px;	top: 320px; }
+
+#hotblock-4 .fade-a,
+#hotblock-4 .fade-b{	
+	background: url('../images/right-stripe-compress.png') center center transparent;
+    background: url('../images/right-stripe-213.png') no-repeat center center transparent;
+}
+#hotblock-4 .focus-block{
+	background: url('../images/hotblock-contact.png') center center transparent;
+}
+#hotblock-4 .focus-block-outline{
+	background: url('../images/hotblock-outline-right.png') center center transparent;
+	opacity: .5;
+}
+#hotblock-4 .title{
+	color: white;
+	left: 611px;
+}
+/* end HOMEPAGE ====================================*/
+
+
+/*========================= GENERAL PORTFOLIO =========================*/
+#portfolio-page1{
+	position: relative;
+    background: url(../images/triangular.png) #ccc;
+}
+#portfolio-page1 h1{
+    font-family: "Maven Pro", sans-serif;
+    font-size: 72px;
+    font-weight: 600;
+    letter-spacing: -6px;
+    padding: 20px 60px 0 0px;
+    margin-bottom: 8px;
+    color: #363636;
+    text-align: right;
+    /*text-shadow: 1px 1px rgba(0,0,0,1);*/
+}
+#portfolio-page1 h2{
+    font-family: "Maven Pro", sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -4px;
+    padding: 0em 0 0 40px;
+    margin-bottom: 3px;
+    color: #363636;
+    /*text-shadow: 1px 1px rgba(0,0,0,1);*/
+}
+#portfolio-page1 h3{
+    font-family: "Maven Pro", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -4px;
+    padding: 0em 60px 0 0px;
+    color: #555;
+    text-align: right;
+    /*text-shadow: 1px 1px rgba(0,0,0,1);*/
+}
+#portfolio-page1 h4{
+    font-family: "Maven Pro", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    padding: 0em 0 0 40px;
+    color: #555;
+    /*text-shadow: 1px 1px rgba(0,0,0,1);*/
+}
+em{
+    font-weight: 600;
+}
+
+/*============= Example Instaces =============*/
+
+/* Portfolio Thumbnails*/
+#thumbnails-row1{
+    padding-left: 40px;
+    height: 300px;
+    margin-top: 20px;
+}
+
+#thumbnails-row2{
+    margin-top: 20px;
+    padding-left: 40px;
+    height: 300px;
+}
+
+.thumbnail {
+    float: left;
+    display: inline-block;
+    width: 17.4%;
+    height: 260px;
+    margin-left: 2.05%;
+    overflow: hidden;
+    border: 1px solid #999;
+    z-index: auto;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+    position: relative;
+    background: #666;
+    background: rgba(128,128,128,.3);
+    cursor: pointer;
+}
+.thumbnail:first-child{
+    margin: 0
+}
+.thumbnail.empty::before{
+    content: "coming soon";
+    font-family: "Homestead-Regular", sans-serif;
+    font-size: 36px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    color: rgba(128,128,128,.5);
+    width: 100%;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.thumbnail.empty:hover::before{
+    opacity: 1;
+}
+
+.thumbnail header{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    padding: 15px 17px 0 17px;
+	color: white;
+	background: black;
+    box-sizing: border-box;
+	vertical-align: top;
+}
+
+#thumbnails-row1 .thumbnail header{
+    font-family: "Maven Pro", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+#thumbnails-row1 .thumbnail header .inner-wrapper{
+    max-width: 260px;
+    line-height: 1.15em;
+}
+#thumbnails-row2 .thumbnail header .inner-wrapper{
+    max-width: 260px;
+}
+.thumbnail header h5{
+    font-family: "Homestead-Display", sans-serif;
+    font-size: 30px; 
+    margin-bottom: 3px;  
+}
+.thumbnail header h6{
+    font-family: "Maven Pro", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    padding: 0;
+    color: #fff;
+    margin-bottom: 10px;
+    /*text-shadow: 1px 1px rgba(0,0,0,1);*/
+}
+@media (max-width: 1280px){
+    .thumbnail header{
+       font-size: 21px;
+    }
+}
+@media (max-width: 920px){
+    .thumbnail header{
+        font-size: 14px;
+    }
+}
+.thumbnail:hover header{
+    background: #005;
+}
+
+.thumbnail .thumbnail-image {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    overflow: hidden;
+    height: 150px;
+    position: absolute;
+    top: 0;
+}
+/* end Portfolio Thumbnails */
+
+
+/*Example Pages*/
+.example-page{
+    display: none;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+.example-page header{
+    height: 38px;
+    padding: 15px;
+    vertical-align: top;
+
+    color: white;
+    background: black;
+
+    font-family: "Homestead-Display", sans-serif;
+    font-size: 30px;
+    text-align: right;
+
+    cursor: pointer;
+}
+.example-page header:hover{
+    background-color: #004;
+}
+.example-page header .back{
+    float:left;
+    font-size: 18px;
+    color: #d6d6d6;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+.example-page header:hover .back{
+    color: white;
+}
+
+/* Example Pages: major blocks */
+.example-page > div{
+	display: inline-block;
+	float:left;
+	width: 50%;
+	height: 50%;
+	min-width: 380px;
+}
+
+.blockB,
+.blockC{
+	text-align: center;
+}
+
+/* The ghost, nudged to maintain perfect centering */
+.blockB:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */ 
+.text-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  width: 46%;
+  min-width: 300px;
+  color: white;
+}
+
+#portfolio-page1 label{
+	font-family: "Windsong", sans-serif;
+	font-size: 60px;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+	color: white;
+}
+.text-wrapper p{
+	font-family: "Calluna", serif;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 21px;
+	line-height: 1.3em;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+	margin-top: -6px;
+}
+.blockC .text-wrapper p{
+	margin-top: 25px;
+}
+
+/* Example Pages: mini-blocks*/
+.blockD{
+	background: white;
+}
+.blockD > a,
+.blockD > div{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	height: 50%;
+	background: white;
+}
+.blockD > a:hover{
+    opacity: .9 !important;
+}
+.miniblockB{
+	position: relative;
+}
+.miniblockB label{
+	position: absolute;
+	right: 50px;
+	top: 31px;
+	opacity: 0;
+}
+.screenshot-thumbnail{
+	cursor: pointer;
+}
+/*end Example Pages*/
+
+/*========================= end GENERAL PORTFOLIO =========================*/
+
+
+
+/*========================= MYER =========================*/
+#thumb-myer .thumbnail-image{
+    background: url(../images/portfolio/myer/myer.png) center center no-repeat white;
+    background-size: contain;
+}
+
+/*========================= end MYER =========================*/
+
+/*========================= BUNNINGS =========================*/
+#thumb-bunnings .thumbnail-image{
+    background: url(../images/portfolio/bunnings/bunnings.png) center center no-repeat #006553;
+    background-size: contain;
+}
+
+/*========================= end BUNNINGS =========================*/
+
+
+
+
+
+/*========================= KAVALRI =========================*/
+
+#thumb-kavalri .thumbnail-image {
+	background: url(../images/portfolio/kavalri/col-kavalri-hover.jpg) 0 0 no-repeat white;
+	background-size: cover;
+}
+/*#thumb-kavalri:hover .thumbnail-image {
+	background: url(../images/portfolio/kavalri/col-kavalri-hover.jpg) 0 0 no-repeat;
+	background-size: cover;
+}*/
+
+#page-kavalri .blockA{
+	background: url(../images/portfolio/kavalri/kavalri-blocka.jpg);
+	background-size: cover;
+}
+#page-kavalri .blockB{
+	background: url(../images/portfolio/kavalri/kavalri-blockb.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+#page-kavalri .blockC{
+	background: url(../images/portfolio/kavalri/kavalri-blockc.jpg);
+	background-size: cover;
+	text-align: center;
+}
+#page-kavalri .blockC:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+#page-kavalri .blockC label{
+	display: block;
+	margin-bottom: 10px;
+}
+#page-kavalri .blockC img{
+	vertical-align: middle;
+}
+
+#page-kavalri .miniblockA{
+	background: url(../images/portfolio/kavalri/kavalri-miniblocka.jpg) white;
+	background-size: cover;
+}
+#page-kavalri .miniblockB{
+	background: #6e767d;
+}
+#page-kavalri .miniblockC{
+	background: url(../images/portfolio/kavalri/kavalri-miniblockc.jpg) white;
+	background-size: cover;
+}
+#page-kavalri .miniblockD{
+	background: url(../images/portfolio/kavalri/kavalri-miniblockd.jpg) white;
+	background-size: cover;
+}
+/*========================= end KAVALRI =========================*/
+
+
+
+
+
+
+
+/*========================= EVE =========================*/
+
+#thumb-eve .thumbnail-image {
+	background: url(../images/portfolio/eve/col-eve-hover.jpg) 0 0 no-repeat;
+	background-size: cover;
+}
+/*#thumb-eve:hover .thumbnail-image {
+	background: url(../images/portfolio/eve/col-eve-hover.jpg) 0 0 no-repeat;
+	background-size: cover;
+}*/
+
+
+#page-eve .blockA{
+	background: url(../images/portfolio/eve/eve-blocka.jpg) center center no-repeat;
+	background-size: cover;
+}
+#page-eve .blockB{
+	background: url(../images/portfolio/eve/eve-blockb.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+
+#page-eve .blockC{
+	background: url(../images/portfolio/eve/eve-blockc.jpg);
+	background-size: cover;
+	text-align: center;
+}
+#page-eve .blockC:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+#page-eve .blockC label{
+	display: block;
+	margin-bottom: 20px;
+}
+#page-eve .blockC img{
+	vertical-align: middle;
+}
+
+#page-eve .blockD{
+	background: #666;
+}
+
+#page-eve .miniblockA{
+	background: url(../images/portfolio/eve/eve-miniblocka.jpg) white;
+	background-size: cover;
+}
+#page-eve .miniblockB{
+	background: #000;
+}
+#page-eve .miniblockB label{
+	color: white;
+}
+#page-eve .miniblockC{
+	background: url(../images/portfolio/eve/eve-miniblockc.jpg) white;
+	background-size: cover;
+}
+#page-eve .miniblockD{
+	background: url(../images/portfolio/eve/eve-miniblockd.jpg) white;
+	background-size: cover;
+}
+/*========================= end EVE =========================*/
+
+
+
+/*========================= JASH LOGO =========================*/
+#thumb-jash-logo .thumbnail-image {
+	background: url(../images/portfolio/jash/col-jash-logo.jpg) center center no-repeat white;
+}
+#thumb-jash-logo:hover .thumbnail-image {
+	background: url(../images/portfolio/jash/col-jash-logo-hover.jpg) center center no-repeat white;
+}
+
+#page-jash-logo .blockA{
+	background: url(../images/portfolio/jash/jash-logo-blocka.jpg) center center;
+	background-size: cover;
+}
+#page-jash-logo .blockB{
+	background: url(../images/portfolio/jash/jash-logo-blockb.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+#page-jash-logo .blockC{
+	background: url(../images/portfolio/jash/jash-logo-blockc.jpg);
+	background-size: cover;
+	text-align: center;
+}
+#page-jash-logo .blockC:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+#page-jash-logo .blockC label{
+	display: block;
+	margin-bottom: 10px;
+}
+#page-jash-logo .blockC img{
+	vertical-align: middle;
+}
+
+#page-jash-logo .blockD{
+	background: url(../images/portfolio/jash/jash-logo-blockd.jpg) center center no-repeat;
+	background-size: 100% auto;
+}
+/*========================= end JASH LOGO =========================*/
+
+
+
+
+/*========================= JASH =========================*/
+#thumb-jash .thumbnail-image {
+	background: url(../images/portfolio/jash/col-jash.jpg) left top no-repeat;
+	background-size: cover;
+}
+#thumb-jash:hover .thumbnail-image {
+	background: url(../images/portfolio/jash/col-jash-hover.jpg) left top no-repeat;
+	background-size: cover;
+}
+
+
+#page-jash .blockA{
+	background: url(../images/portfolio/jash/jash-blocka.jpg) center center no-repeat;
+	background-size: cover;
+}
+#page-jash .blockB{
+	background: url(../images/portfolio/jash/jash-blockb.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+
+#page-jash .blockC{
+	background: url(../images/portfolio/jash/jash-blockc.jpg);
+	background-size: cover;
+	text-align: center;
+}
+#page-jash .blockC:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+#page-jash .blockC label{
+	display: block;
+	margin-bottom: 20px;
+}
+#page-jash .blockC img{
+	vertical-align: middle;
+}
+
+#page-jash .blockD{
+	background: #fff;
+}
+
+#page-jash .miniblockA{
+	background: url(../images/portfolio/jash/jash-miniblocka.jpg) white;
+	background-size: cover;
+}
+#page-jash .miniblockB{
+	background: #7d8d99;
+}
+#page-jash .miniblockB label{
+	color: white;
+}
+#page-jash .miniblockC{
+	background: url(../images/portfolio/jash/jash-miniblockc.jpg) white;
+	background-size: cover;
+}
+#page-jash .miniblockD{
+	background: url(../images/portfolio/jash/jash-miniblockd.jpg) white;
+	background-size: cover;
+}
+
+#page-jash .miniblockA:hover{
+	background: url(../images/portfolio/jash/jash-miniblocka-hover.jpg) white;
+	background-size: cover;
+}
+#page-jash .miniblockC:hover{
+	background: url(../images/portfolio/jash/jash-miniblockc-hover.jpg) white;
+	background-size: cover;
+}
+#page-jash .miniblockD:hover{
+	background: url(../images/portfolio/jash/jash-miniblockd-hover.jpg) white;
+	background-size: cover;
+}
+/*========================= end JASH =========================*/
+
+
+
+
+
+/*========================= AGM =========================*/
+#thumb-agm .thumbnail-image {
+	background: url(../images/portfolio/agm/col-agm.jpg) center center no-repeat white;
+}
+#thumb-agm:hover .thumbnail-image {
+	background: url(../images/portfolio/agm/col-agm-hover.gif) center center no-repeat white;
+}
+
+#page-agm .blockA{
+	background: url(../images/portfolio/agm/agm-blocka.jpg) center center no-repeat white;
+
+}
+#page-agm .blockB{
+	background: url(../images/portfolio/agm/agm-block2b.jpg) center center no-repeat white;
+	background-size: cover;
+	text-align: center;
+}
+
+#page-agm .text-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  width: 28%;
+}
+
+
+#page-agm .blockC{
+	background: url(../images/portfolio/agm/agm-block1B.jpg) no-repeat white;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+}
+#page-agm .blockC:before{
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.25em;
+}
+
+#page-agm .blockC label{
+	display: block;
+	margin-bottom: 10px;
+}
+#page-agm .blockC img{
+	vertical-align: middle;
+}
+
+#page-agm .blockD{
+	background: url(../images/portfolio/agm/agm-blockd.jpg) center center no-repeat white;
+	background-size: 100% auto;
+}
+/*========================= end AGM =========================*/
+
+
+
+/*========================= KAVAN =========================*/
+#thumb-kavan .thumbnail-image {
+	background: url(../images/portfolio/kavan/col-kavan.jpg) center center no-repeat white;
+}
+#thumb-kavan:hover .thumbnail-image {
+	background: url(../images/portfolio/kavan/col-kavan-hover.jpg) center center no-repeat white;
+}
+/*========================= end KAVAN =========================*/
+
+
+/*========================= MEDSTOCK =========================*/
+#thumb-medstock .thumbnail-image {
+	background: url(../images/portfolio/medstock/col-medstock.jpg) left top no-repeat;
+	background-size: cover;
+}
+#thumb-medstock:hover .thumbnail-image {
+	background: url(../images/portfolio/medstock/col-medstock-hover.jpg) left top no-repeat;
+	background-size: cover;
+}
+/*========================= end MEDSTOCK =========================*/
+
+
+
+/*========================= SPARKLES LOGO =========================*/
+#thumb-sparkles-logo .thumbnail-image {
+	background: url(../images/portfolio/sparkles/col-sparkles-logo.jpg) center center no-repeat;
+}
+#thumb-sparkles-logo:hover .thumbnail-image {
+	background: url(../images/portfolio/sparkles/col-sparkles-logo-hover.jpg) center center no-repeat;
+}
+/*========================= end sparkles LOGO =========================*/
+
+
+
+
+/*========================= SPARKLES =========================*/
+#thumb-sparkles .thumbnail-image {
+	background: url(../images/portfolio/sparkles/col-sparkles.jpg) no-repeat;
+	background-size: cover;
+}
+#thumb-sparkles:hover .thumbnail-image {
+	background: url(../images/portfolio/sparkles/col-sparkles-hover.jpg) no-repeat;
+	background-size: cover;
+}
+/*========================= end SPARKLES =========================*/
+
+
+/*========================= FRUIT =========================*/
+#thumb-fruit .thumbnail-image {
+	background: url(../images/portfolio/fruit/col-fruit.jpg) no-repeat;
+	background-size: cover;
+}
+#thumb-fruit:hover .thumbnail-image {
+	background: url(../images/portfolio/fruit/col-fruit-hover.jpg) no-repeat;
+	background-size: cover;
+}
+/*========================= end FRUIT =========================*/
+
+
+
+/*========================= ABOUT PAGE =========================*/
+#about{
+    background: url("../images/mosaic-small.gif") fixed #262626;
+    color: white;
+}
+#about .page-inner{
+    height: 100%;
+    text-align: center;
+}
+.col{
+    width: 49%;
+}
+#about .left-col{
+    float:left;
+    background: black;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 46px 50px;
+    border-radius: 5px;
+    width: 60%;
+    max-width: 700px;
+}
+#about .right-col{
+    float:right;
+}
+
+
+/* Ghost element for vertical centering */
+#about .page-inner:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+#about .center{
+    background: black;
+    background: rgba(20,20,20, 0.9);
+    padding: 60px;
+    border-radius: 8px;
+    width: 60%;
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    text-align: left;
+}
+
+
+
+#about h1{
+    font-family: "Homestead-Display", sans-serif;
+    font-weight: normal;
+    font-size: 48px;
+    margin-bottom: 29px;
+    color: #fece67;
+}
+#about p.intro{
+    font-family: "Open Sans Condensed";
+    font-size: 20px;
+    /*font-style: italic;*/
+    line-height: 1.9em;
+    max-width: 575px;
+    margin-bottom: 48px;
+    color: #fff;
+}
+#about p.intro strong{
+    color: #FECE67;
+}
+
+#about h3{
+    font-family: "Homestead-Display", sans-serif;;
+    font-size: 28px;
+    margin-bottom: 23px;
+    color: #fece67;
+
+}
+#about ul{
+    list-style: disc;
+    padding-left: 12px;
+    width: 82%;
+    font-family: "Open Sans Condensed", serif;
+    font-size: 20px;
+    /*font-style: italic;*/
+    color: #fff;
+}
+#about li{
+    line-height: 1.25em;
+    margin-bottom: .6em;
+}
+
+/*========================= end ABOUT PAGE =========================*/
+
+
+
+/* CONTACT PAGE ====================================*/
+#contact{
+	background: black;
+}
+#contact .page-inner{
+    height: 100%;
+    width: 100%;
+}
+#contact .col{
+    display: inline-block;
+    vertical-align: top;
+}
+#contact .left-col{
+    width: 42.5%;
+    position: relative;
+    height: 100%;
+    margin-right: 43px;
+}
+#contact .left-col h2,
+#contact .left-col h3{
+    /*border: 1px solid white;*/
+    float: right;
+}
+#contact .left-col .text{
+    color: #ffc20e;
+    font-family: "Homestead-Display", sans-serif;
+    font-size: 77px;
+    line-height: 68px;
+    letter-spacing: -2px;
+    text-align: right;
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    width: 347px;
+}
+#contact .left-col .exclaim{
+    padding-left: 4px;
+}
+#contact .left-col h3{
+    color: white;
+    font-size: 67px;
+    width: 336px;
+}
+#contact .right-col{
+    height: 100%;
+}
+#contact .contact-form{
+	margin-top: 70px;
+    width: 463px;
+    height: 570px;
+    /*background: url("../images/contact-form-bg.png") 0px 3px no-repeat;*/
+}
+.form-row{
+}
+.form-row label{
+	display: inline-block;
+    height: 27px;
+    font-size: 24px;
+    letter-spacing: -1px;    
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: white;
+    margin-bottom: 14px;
+}
+.form-row .input-wrapper{
+    margin-bottom: 2px;
+}
+.form-row input,
+.form-row textarea{
+    border: 0;
+    color: #828282;
+    background: #242424;
+    font-size: 24px;
+    letter-spacing: -1px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border: 1px solid black;
+}
+
+.form-row input:hover,
+.form-row textarea:hover{
+    background: #444;
+    border: 1px dashed #aaa;
+    border-radius: 5px;
+    color: white;
+}
+
+.form-row input:focus,
+.form-row textarea:focus{
+    background: #444;
+    border: 1px dashed #aaa;
+    border-radius: 5px; 
+}
+
+.form-row input[type="text"]{
+    line-height: 24px;
+    padding: 0px 0 6px;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.form-row input.used,
+.form-row textarea.used{
+    color: white;   
+}
+
+.form-row input.has-error,
+.form-row textarea.has-error{
+    border: 1px dashed #b00 !important;
+    border-radius: 5px;
+}
+
+.error-msg{
+    color: #c00;
+    font-size: 24px;
+    letter-spacing: -.75px;    
+    line-height: 1.7em;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-bottom: 11px;
+    display: none;
+}
+
+.name label{
+    display: block;
+    background: url("../images/name-label-bg.png") 151px 3px no-repeat;
+}
+.name .input-wrapper{
+    background: url("../images/name-input-bg.png") 132px 8px no-repeat;
+}
+#Name{
+    width: 129px;
+}
+
+.email label{
+    display: block;
+    background: url("../images/email-label-bg.png") 136px 3px no-repeat;
+}
+.email .input-wrapper{
+    background: url("../images/email-input-bg.png") 195px 8px no-repeat;
+}
+#Email{
+    width: 193px;
+}
+
+.message label{
+    display: block;
+    background: url("../images/message-label-bg.png") 158px 3px no-repeat;
+}
+.message .input-wrapper{
+    background: url("../images/message-input-bg.png") 0px 8px no-repeat;
+    min-height: 341px;
+}
+#Message{
+    resize: none;
+    height: 39px;
+    width: 204px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#submit-block{
+    display: none;
+}
+.form-row .submit-button{
+	border-radius: 3px;
+	background-color: #FECE67;
+	color: white;
+    font-family: 'Homestead-Display', sans-serif;
+	padding: 6px 0;
+	width: 150px;
+	cursor: pointer;
+}
+.form-row .submit-button:hover{
+	color: #FECE67;
+	background-color: white;
+}
+/* end CONTACT PAGE ====================================*/
+
+
